@@ -5,7 +5,7 @@ const incidentController = require('./controllers/incidentController');
 const profileController = require('./controllers/profileController');
 const sessionController = require('./controllers/sessionController');
 
-routers.post('/login', sessionController.login);
+routers.post('/sessions', sessionController.create);
 
 routers.get('/ongs', ongController.index);
 routers.post('/ongs', ongController.create);

@@ -7,7 +7,8 @@ module.exports = {
         const user_id = request.headers.authorization;
         const incidents = await connection('incidents')
         .where('ong_id', user_id)
-        .select('*');
+        .select('*')
+        .orderBy('id', 'desc');
 
         response.json(incidents);
 
