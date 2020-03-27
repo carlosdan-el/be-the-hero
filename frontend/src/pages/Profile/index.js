@@ -1,6 +1,6 @@
-import React, {useEffect, useState} from 'react';
+import React, {Component, useEffect, useState} from 'react';
 import {Link, useHistory} from 'react-router-dom';
-import {FiPower, FiTrash} from 'react-icons/fi';
+import {FiPower, FiTrash, FiEdit} from 'react-icons/fi';
 import logoImg from '../../assets/logo.svg';
 import './styles.css';
 import api from '../../services/api';
@@ -36,7 +36,7 @@ export default function Profile() {
                 }
             });
 
-            setIncidents(incidents.filter(incidents => incidents.id != id))
+            setIncidents(incidents.filter(incidents => incidents.id !== id))
 
 
         } catch(err) {

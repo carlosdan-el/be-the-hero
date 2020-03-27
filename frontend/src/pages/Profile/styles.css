@@ -43,6 +43,7 @@
     margin-bottom: 20px;
 }
 
+
 .profile-container ul {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
